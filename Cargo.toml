@@ -18,6 +18,7 @@ opt-level = 3
 
 [dependencies]
 bevy = { version = "0.13.0", features = ["dynamic_linking"] }
+chrono = "0.4.35"
 
 [dev-dependencies]
 rstest = "0.18.2"
