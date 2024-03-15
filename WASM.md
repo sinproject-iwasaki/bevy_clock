@@ -34,7 +34,6 @@ cargo build --profile wasm-release --target wasm32-unknown-unknown
 wasm-bindgen --out-name wasm_bevy_clock \
   --out-dir wasm/target \
   --target web target/wasm32-unknown-unknown/wasm-release/bevy_clock.wasm
-
 ```
 
 ## Copy assets

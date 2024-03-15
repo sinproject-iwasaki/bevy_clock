@@ -1,10 +1,11 @@
 #![cfg_attr(coverage_nightly, feature(coverage_attribute))]
 
-use bevy::prelude::*;
+use bevy::{asset::AssetMetaCheck, prelude::*};
 
 #[cfg_attr(coverage_nightly, coverage(off))]
 pub fn run() {
     App::new()
+        .insert_resource(AssetMetaCheck::Never)
         .add_plugins(DefaultPlugins)
         .add_systems(Startup, setup)
         .add_systems(Update, update_time)
