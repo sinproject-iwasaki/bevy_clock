@@ -3,6 +3,7 @@
   "editor.defaultFormatter": "rust-lang.rust-analyzer",
   "cSpell.words": [
     "aarch",
+    "bindgen",
     "Cacher",
     "chrono",
     "clippy",
@@ -15,6 +16,7 @@
     "rstest",
     "rustflags",
     "rustfmt",
+    "rustup",
     "Tetris",
     "Validatable",
     "wgpu",

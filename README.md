@@ -1,4 +1,4 @@
-# bevy_template
+# Bevy Clock
 
 This is the world's first template that includes everything — [VSCode](https://code.visualstudio.com/) Recommended Extensions, [GitHub Actions](https://docs.github.com/en/actions) for CI, [Lefthook](https://github.com/evilmartians/lefthook), and [rstest](https://github.com/la10736/rstest) — for comprehensive [Rust](https://www.rust-lang.org/) and [Bevy engine](https://bevyengine.org/) projects.
 
