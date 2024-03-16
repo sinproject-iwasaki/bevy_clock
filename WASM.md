@@ -31,7 +31,7 @@ cargo build --profile wasm-release --target wasm32-unknown-unknown
 # or
 # cargo build --release --target wasm32-unknown-unknown
 
-wasm-bindgen --out-name wasm_bevy_clock \
+wasm-bindgen --out-name bevy_clock \
   --out-dir wasm/target \
   --target web target/wasm32-unknown-unknown/wasm-release/bevy_clock.wasm
 ```
@@ -39,6 +39,21 @@ wasm-bindgen --out-name wasm_bevy_clock \
 ## Copy assets
 
 Copy asset files to wasm directory.
+
+## Use wasm-opt
+
+### Installing
+
+```sh
+brew install binaryen
+```
+
+### Optimize
+
+```sh
+wasm-opt -Oz --output wasm/target/optimized.wasm wasm/target/bevy_clock_bg.wasm
+mv wasm/target/optimized.wasm wasm/target/bevy_clock_bg.wasm
+```
 
 ## Run
 
