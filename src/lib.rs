@@ -77,7 +77,7 @@ fn animate_scale(time: Res<Time>, mut query: Query<&mut Transform, (With<Text>, 
     for mut transform in query.iter_mut() {
         // transform.translation = Vec3::new(400.0, 0.0, 0.0);
 
-        let scale = (time.elapsed_seconds().sin() + 1.1) * 2.0;
+        let scale = (time.elapsed_seconds().sin() + 1.1) * 1.0;
         transform.scale.x = scale;
         transform.scale.y = scale;
     }
