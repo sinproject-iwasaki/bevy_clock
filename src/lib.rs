@@ -1,5 +1,6 @@
 #![cfg_attr(coverage_nightly, feature(coverage_attribute))]
 
+mod audio;
 mod wasm;
 
 use bevy::{asset::AssetMetaCheck, prelude::*};
@@ -10,6 +11,7 @@ pub fn run() {
         .insert_resource(AssetMetaCheck::Never)
         .add_plugins(wasm::get_plugins())
         .add_systems(Startup, setup)
+        .add_systems(Startup, audio::spawn_sound)
         .add_systems(Update, update_time)
         // .add_systems(Update, animate_transform)
         .add_systems(Update, animate_rotation)
