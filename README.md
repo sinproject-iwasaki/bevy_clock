@@ -6,8 +6,6 @@ A time-flow experience app built with [Rust](https://www.rust-lang.org/) and [Be
 
 GitHub Pages: [Link](https://sinproject-iwasaki.github.io/bevy_clock/)
 
-Node: Not supported on Android: [Issue](https://github.com/sinproject-iwasaki/bevy_clock/issues/17)
-
 ## Getting Started
 
 Install the required dependencies and compile the project:
