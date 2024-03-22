@@ -10,12 +10,16 @@ pub fn run() {
     App::new()
         .insert_resource(AssetMetaCheck::Never)
         .add_plugins(wasm::get_plugins())
-        .add_systems(Startup, setup)
-        .add_systems(Startup, audio::spawn_sound)
-        .add_systems(Update, update_time)
-        // .add_systems(Update, animate_transform)
-        .add_systems(Update, animate_rotation)
-        .add_systems(Update, animate_scale)
+        .add_systems(Startup, (setup, audio::spawn_sound))
+        .add_systems(
+            Update,
+            (
+                update_time,
+                animate_rotation,
+                animate_scale,
+                text_color_system,
+            ),
+        )
         .run();
 }
 
@@ -84,5 +88,18 @@ fn animate_scale(time: Res<Time>, mut query: Query<&mut Transform, (With<Text>, 
         let scale = (time.elapsed_seconds().sin() + 1.1) * 1.0;
         transform.scale.x = scale;
         transform.scale.y = scale;
+    }
+}
+
+fn text_color_system(time: Res<Time>, mut query: Query<&mut Text, With<TimeText>>) {
+    for mut text in &mut query {
+        let seconds = time.elapsed_seconds();
+
+        text.sections[0].style.color = Color::Rgba {
+            red: (1.25 * seconds).sin() / 2.0 + 0.5,
+            green: (0.75 * seconds).sin() / 2.0 + 0.5,
+            blue: (0.50 * seconds).sin() / 2.0 + 0.5,
+            alpha: 1.0,
+        };
     }
 }
