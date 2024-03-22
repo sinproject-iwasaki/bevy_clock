@@ -4,7 +4,7 @@ A time-flow experience app built with [Rust](https://www.rust-lang.org/) and [Be
 
 ## Demo
 
-GitHub Pages: [Link](https://sinproject-iwasaki.github.io/bevy_clock/)
+GitHub Pages: [Link](https://sinproject-iwasaki.github.io/feel-the-time/)
 
 ## Getting Started
 

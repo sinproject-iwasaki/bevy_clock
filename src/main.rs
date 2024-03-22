@@ -2,5 +2,5 @@
 
 #[cfg_attr(coverage_nightly, coverage(off))]
 fn main() {
-    bevy_clock::run();
+    feel_the_time::run();
 }
